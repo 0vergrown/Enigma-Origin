@@ -1,0 +1,122 @@
+{
+    "name":"Aura of Mistrust",
+    "description":"The air around you whisper tales of betrayal. Villagers refuse to barter, and the creatures of the land deny your companionship.",
+    "type":"origins:multiple",
+    "no_trades": {
+        "type": "origins:prevent_entity_use",
+        "bientity_action": {
+            "type": "origins:actor_action",
+            "action": {
+                "type": "origins:and",
+                "actions": [
+                    {
+                        "type": "origins:execute_command",
+                        "command": "title @s actionbar {\"text\": \"Don't speak to me or my son ever again!\", \"color\": \"red\"}"
+                    },
+                    {    
+                        "type": "origins:damage",
+                        "amount": 1,
+                        "damage_type": "minecraft:generic"
+                    }
+                ]
+            }
+        },
+        "bientity_condition": {
+            "type": "origins:target_condition",
+            "condition": {
+                "type": "origins:entity_type",
+                "entity_type": "minecraft:villager"
+            }
+        }
+    },
+    "price_increase_and_golem_attack":{
+       "type":"origins:action_over_time",
+       "entity_action":{
+          "type":"origins:and",
+          "actions":[
+             {
+                "type":"origins:execute_command",
+                "command":"execute at @s as @e[type=villager,distance=..7] run data merge entity @s {Gossips:[{Target:[I;1,1,1,1],Type:'major_negative',Value:110}]}"
+             },
+             {
+                "type":"origins:execute_command",
+                "command":"execute at @s as @e[type=villager,distance=..7] run data modify entity @s Gossips[{Target:[I;1,1,1,1]}].Target set from entity @p UUID"
+             },
+             {
+                "type":"origins:execute_command",
+                "command":"execute at @s as @e[type=minecraft:iron_golem,distance=..10] run data modify entity @s AngryAt set from entity @p UUID"
+             },
+             {
+                "type":"origins:execute_command",
+                "command":"execute at @s as @e[type=minecraft:iron_golem,distance=..10] run data modify entity @s AngerTime set value 60"
+             },
+             {
+                "type":"origins:execute_command",
+                "command":"execute at @s as @e[type=minecraft:iron_golem,distance=10..20] run data modify entity @s AngryAt set from entity @s UUID"
+             },
+             {
+                "type":"origins:execute_command",
+                "command":"execute at @s as @e[type=minecraft:iron_golem,distance=10..20] run data modify entity @s AngerTime set value 0"
+             }
+          ]
+       },
+       "interval":10
+    },
+    "no_wolf_tame": {
+        "type": "origins:prevent_entity_use",
+        "bientity_action": {
+            "type": "origins:actor_action",
+            "action": {
+                "type": "origins:execute_command",
+                "command": "title @s actionbar {\"text\": \"*woof*\", \"color\": \"red\"}"
+            }
+        },
+        "bientity_condition": {
+            "type": "origins:target_condition",
+            "condition": {
+                "type": "origins:entity_type",
+                "entity_type": "minecraft:wolf"
+            }
+        }
+    },
+    "nt5": {
+        "type": "origins:prevent_entity_use",
+        "bientity_action": {
+            "type": "origins:actor_action",
+            "action": {
+                "type": "origins:execute_command",
+                "command": "title @s actionbar {\"text\": \"*meow, meow, meow, MEOW!!!*\", \"color\": \"red\"}"
+            }
+        },
+        "bientity_condition": {
+            "type": "origins:target_condition",
+            "condition": {
+                "type": "origins:entity_type",
+                "entity_type": "minecraft:cat"
+            }
+        }
+    },
+    "no_tame": {
+        "type": "origins:prevent_entity_use",
+        "bientity_condition": {
+            "type": "origins:target_condition",
+            "condition": {
+                "type": "origins:or",
+                "conditions": [
+                    {
+                        "type": "origins:entity_type",
+                        "entity_type": "minecraft:ocelot"
+                    },
+                    {    
+                        "type": "origins:entity_type",
+                        "entity_type": "minecraft:fox"
+                    },
+                    {
+                        "type": "origins:entity_type",
+                        "entity_type": "minecraft:horse"
+                    }
+                ]
+            }
+        }
+    }
+}

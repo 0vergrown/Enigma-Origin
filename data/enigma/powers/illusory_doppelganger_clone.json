@@ -1,0 +1,22 @@
+{
+	"type":"origins:action_on_callback",
+	"entity_action_added":{
+		"type":"origins:and",
+		"actions":[
+            {
+                "type": "origins:explode",
+                "power": 4,
+                "destruction_type": "none",
+                "damage_self": true,
+                "create_fire": false
+            },
+            {
+                "type": "origins:play_sound",
+                "sound": "minecraft:entity.generic.explode",
+                "volume": 1.00,
+                "pitch": 1.00
+            }
+		]
+	},
+	"hidden":true
+}

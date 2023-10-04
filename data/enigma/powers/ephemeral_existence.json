@@ -1,0 +1,9 @@
+{
+    "name": "Ephemeral Existence",
+    "description": "Your mysterious nature makes you more susceptible to damage, as your form flickers between reality and illusion.",
+    "type": "origins:modify_damage_taken",
+    "modifier": {
+        "operation": "multiply_total",
+        "value": 1.1
+    }
+}

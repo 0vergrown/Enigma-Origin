@@ -1,0 +1,18 @@
+{
+    "name": "Pacifist's Paradox",
+    "description": "Your hands are bound by unseen forces, unable to deal damage with weapons of war.",
+    "type": "origins:modify_damage_dealt",
+    "modifier": {
+        "operation": "multiply_total",
+        "value": -1.0,
+        "name": "No damage"
+    },
+    "condition": {
+        "type": "origins:equipped_item",
+        "equipment_slot": "mainhand",
+        "item_condition": {
+            "type": "origins:empty"
+        },
+        "inverted": true
+    }
+}

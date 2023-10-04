@@ -1,0 +1,21 @@
+{
+    "hidden": true,
+    "type": "origins:self_glow",
+    "entity_condition":{
+     "type": "origins:and",
+     "conditions": [
+         {
+            "type": "origins:origin",
+            "origin": "enigma:enigma",
+            "layer": "origins:origin"
+         },
+         {      
+             "type": "origins:living"
+         }
+     ]
+    },
+    "use_teams":false,
+    "red":1,
+    "green":1,
+    "blue":1
+}

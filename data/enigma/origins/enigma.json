@@ -1,0 +1,18 @@
+{
+	"powers": [
+		"enigma:shadows_embrace",
+		"enigma:illusory_doppelganger",
+		"enigma:ephemeral_phantom",
+		"enigma:gaze_of_the_abyss",
+		"enigma:forests_whisper",
+		"enigma:lights_bane",
+		"enigma:aura_of_mistrust",
+		"enigma:ephemeral_existence",
+		"enigma:pacifists_paradox"
+	],
+	"icon": "minecraft:jigsaw",
+	"order": 10,
+	"impact": 2,
+	"name": "Enigma",
+	"description": "You are the embodiment of mystery and deception. Your presence instills fear and uncertainty, making others question the very fabric of their reality. The world around you is but a puzzle, and you, the unsolvable riddle within it."
+}
