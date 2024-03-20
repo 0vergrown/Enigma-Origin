@@ -4,11 +4,9 @@
 		"enigma:illusory_doppelganger",
 		"enigma:ephemeral_phantom",
 		"enigma:gaze_of_the_abyss",
-		"enigma:forests_whisper",
-		"enigma:lights_bane",
+		"enigma:midnight_sight",
 		"enigma:aura_of_mistrust",
-		"enigma:ephemeral_existence",
-		"enigma:pacifists_paradox"
+		"enigma:ephemeral_existence"
 	],
 	"icon": "minecraft:jigsaw",
 	"order": 10,

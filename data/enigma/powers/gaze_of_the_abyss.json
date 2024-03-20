@@ -1,71 +1,60 @@
 {
     "name":"Gaze of the Abyss",
     "description":"Lock eyes with your prey and let the dance of doom commence. Initially, your victims are slowed and weakened, but as the dance progresses, they are blinded and overwhelmed by nausea, until the abyss consumes them.",
-    "badges": [
-        {
-            "type":"origins:tooltip",
-            "sprite":"origins:textures/gui/badge/toggle.png",
-            "text":[
-              "Toggleable with [",
-              {
+    "badges":[
+       {
+          "type":"origins:tooltip",
+          "sprite":"origins:textures/gui/badge/toggle.png",
+          "text":[
+             "Toggleable with [",
+             {
                 "keybind":"key.saveToolbarActivator"
-              },
-              "] key."
-            ]
-        }
+             },
+             "] key."
+          ]
+       }
     ],
-    "type": "origins:multiple",
-    "toggle": {
-        "type": "origins:toggle",
-        "active_by_default": false,
-        "key": {
-            "key": "key.saveToolbarActivator"
-        },
-        "retain_state":false
+    "type":"origins:multiple",
+    "toggle":{
+       "type":"origins:toggle",
+       "active_by_default":false,
+       "key":{
+          "key":"key.saveToolbarActivator"
+       },
+       "retain_state":false
     },
-    "stare": {
-        "type": "origins:action_over_time",
-        "entity_action": {
-            "type": "origins:raycast",
-            "distance": 32,
-            "block": false,
-            "entity": true,
-            "shape_type": "visual",
-            "fluid_handling": "none",
-            "bientity_condition": {
-                "type": "origins:target_condition",
-                "condition": {
-                    "type": "origins:living"
-                }
-            },
-            "bientity_action": {
-                "type": "origins:target_action",
-                "action": {
-                    "type": "origins:and",
-                    "actions": [
-                        {
-                            "type": "origins:grant_power",
-                            "power": "enigma:gaze_of_the_abyss_target",
-                            "source": "enigma:enigma"
-                        },
-                        {    
-                            "type": "origins:change_resource",
-                            "resource": "enigma:gaze_of_the_abyss_target_sanity",
-                            "change": -1,
-                            "operation":"add"
-                        }
-                    ]
-                }
-            },
-            "command_step":0.25,
-            "command_along_ray_only_on_hit":false
-        },
-        "interval": 60,
-        "condition":{
-            "type":"origins:power_active",
-            "power":"enigma:gaze_of_the_abyss_toggle",
-            "inverted":false
-        }
+    "stare":{
+       "type":"origins:action_over_time",
+       "entity_action":{
+          "type":"origins:raycast",
+          "distance":32,
+          "block":false,
+          "entity":true,
+          "shape_type":"visual",
+          "fluid_handling":"none",
+          "bientity_condition":{
+             "type":"origins:target_condition",
+             "condition":{
+                "type":"origins:living"
+             }
+          },
+          "bientity_action":{
+             "type":"origins:target_action",
+             "action":{
+                "type":"origins:change_resource",
+                "resource":"enigma:abyssal_influence_sanity",
+                "change":-1,
+                "operation":"add"
+             }
+          },
+          "command_step":0.25,
+          "command_along_ray_only_on_hit":false
+       },
+       "interval":60,
+       "condition":{
+          "type":"origins:power_active",
+          "power":"enigma:gaze_of_the_abyss_toggle",
+          "inverted":false
+       }
     }
-
 }

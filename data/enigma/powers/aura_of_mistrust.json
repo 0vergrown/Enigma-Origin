@@ -79,7 +79,7 @@
             }
         }
     },
-    "nt5": {
+    "no_cat": {
         "type": "origins:prevent_entity_use",
         "bientity_action": {
             "type": "origins:actor_action",

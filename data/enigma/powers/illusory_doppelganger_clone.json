@@ -15,6 +15,38 @@
                 "sound": "minecraft:entity.generic.explode",
                 "volume": 1.00,
                 "pitch": 1.00
+            },
+            {
+                "type": "origins:equipped_item_action",
+                "equipment_slot": "head",
+                "action": {
+                    "type": "origins:consume",
+                    "amount": 1
+                }
+            },
+            {
+                "type": "origins:equipped_item_action",
+                "equipment_slot": "chest",
+                "action": {
+                    "type": "origins:consume",
+                    "amount": 1
+                }
+            },
+            {
+                "type": "origins:equipped_item_action",
+                "equipment_slot": "legs",
+                "action": {
+                    "type": "origins:consume",
+                    "amount": 1
+                }
+            },
+            {
+                "type": "origins:equipped_item_action",
+                "equipment_slot": "feet",
+                "action": {
+                    "type": "origins:consume",
+                    "amount": 1
+                }
             }
 		]
 	},
