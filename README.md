@@ -32,7 +32,7 @@ This datapack requires the following to function properly:
 - [Origins Mod](https://github.com/apace100/origins-fabric) - A Minecraft mod that allows you to choose an Origin at the beginning, granting various abilities and drawbacks.
 
 ## Installation
-To install the Voidwalker Origin datapack, follow these steps:
+To install the Enigma Origin datapack, follow these steps:
 1. Make sure you have all dependencies installed.
 2. Download the latest release of Enigma Origin from the [release page](https://modrinth.com/datapack/enigma-origin).
 3. Place the downloaded file in the `datapacks` folder of your Minecraft world directory.
