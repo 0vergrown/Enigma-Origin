@@ -14,39 +14,37 @@
          "condition":{
             "type":"origins:resource",
             "resource":"enigma:abyssal_influence_sanity",
-            "comparison":"<",
+            "comparison":"!=",
             "compare_to":15
          }
       },
       "start_value":15,
-      "min_action": {
-         "type": "origins:and",
-         "actions": [
+      "min_action":{
+         "type":"origins:and",
+         "actions":[
             {
-               "type": "origins:change_resource",
-               "resource": "enigma:abyssal_influence_sanity",
-               "change": 15,
-               "operation": "set"
+               "type":"origins:clear_effect",
+               "effect":"minecraft:speed"
             },
             {
-               "type": "origins:execute_command",
-               "command": "kill @s"
+               "type":"origins:clear_effect",
+               "effect":"minecraft:weakness"
             },
             {
-               "type": "origins:clear_effect",
-               "effect": "minecraft:speed"
+               "type":"origins:clear_effect",
+               "effect":"minecraft:slowness"
             },
             {
-               "type": "origins:clear_effect",
-               "effect": "minecraft:weakness"
+               "type":"origins:clear_effect",
+               "effect":"minecraft:nausea"
             },
             {
-               "type": "origins:clear_effect",
-               "effect": "minecraft:slowness"
-            },
-            {
-               "type": "origins:clear_effect",
-               "effect": "minecraft:nausea"
+               "type":"origins:delay",
+               "action":{
+                  "type":"origins:execute_command",
+                  "command":"kill @s"
+               },
+               "ticks":20
             }
          ]
       }
@@ -268,8 +266,8 @@
       }
    },
    "particle_effects":{
-      "type": "origins:particle",
-      "particle": "minecraft:smoke",
+      "type":"origins:particle",
+      "particle":"minecraft:smoke",
       "count":5,
       "speed":0.025,
       "force":true,
@@ -279,9 +277,9 @@
          "z":0.25
       },
       "offset_y":0.75,
-      "frequency": 1,
-      "visible_in_first_person": false,
-      "visible_while_invisible": false,
+      "frequency":1,
+      "visible_in_first_person":false,
+      "visible_while_invisible":false,
       "condition":{
          "type":"origins:resource",
          "resource":"enigma:abyssal_influence_sanity",
@@ -310,5 +308,17 @@
       "red":1,
       "green":1,
       "blue":1
+   },
+   "remove_on_respawn":{
+      "type":"origins:action_on_callback",
+      "entity_action_respawned":{
+         "type":"origins:revoke_power",
+         "power":"enigma:abyssal_influence",
+         "source":"enigma:abyssal_influence"
+      },
+      "condition": {
+         "type": "origins:entity_type",
+         "entity_type": "minecraft:player"
+     }
    }
 }

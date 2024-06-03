@@ -27,7 +27,7 @@
 				{
 				   "type":"origins:grant_power",
 				   "power":"enigma:shadows_embrace_target_glow",
-				   "source":"enigma:enigma"
+				   "source":"enigma:shadows_embrace_target_glow"
 				},
 				{
 				   "type":"origins:delay",
@@ -38,7 +38,7 @@
 						{
 							"type":"origins:revoke_power",
 							"power":"enigma:shadows_embrace_target_glow",
-							"source":"enigma:enigma"
+							"source":"enigma:shadows_embrace_target_glow"
 						},
 						{
 							"type": "origins:execute_command",
