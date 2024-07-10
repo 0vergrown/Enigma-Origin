@@ -1,0 +1,61 @@
+{
+    "type":"origins:action_on_callback",
+    "entity_action_added":{
+       "type":"origins:and",
+       "actions":[
+          {
+             "type":"origins:explode",
+             "power":4,
+             "destruction_type":"none",
+             "damage_self":false,
+             "create_fire":false
+          },
+          {
+             "type":"origins:play_sound",
+             "sound":"minecraft:entity.generic.explode",
+             "volume":1.00,
+             "pitch":1.00
+          },
+          {
+            "type": "origins:execute_command",
+            "command": "kill @s"
+          },
+          {
+            "type": "origins:execute_command",
+            "command": "particle minecraft:smoke ~ ~1 ~ 0.5 0.5 0.5 0.05 100"
+          },
+          {
+             "type":"origins:equipped_item_action",
+             "equipment_slot":"head",
+             "action":{
+                "type":"origins:consume",
+                "amount":1
+             }
+          },
+          {
+             "type":"origins:equipped_item_action",
+             "equipment_slot":"chest",
+             "action":{
+                "type":"origins:consume",
+                "amount":1
+             }
+          },
+          {
+             "type":"origins:equipped_item_action",
+             "equipment_slot":"legs",
+             "action":{
+                "type":"origins:consume",
+                "amount":1
+             }
+          },
+          {
+             "type":"origins:equipped_item_action",
+             "equipment_slot":"feet",
+             "action":{
+                "type":"origins:consume",
+                "amount":1
+             }
+          }
+       ]
+    }
+}
